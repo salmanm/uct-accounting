@@ -1,0 +1,42 @@
+{
+  "name": "hse-health-app-backend-service",
+  "version": "1.0.0",
+  "description": "HSE Health App Backend Service",
+  "repository": "https://github.com/HSEIreland/hse-health-app-backend-service.git",
+  "license": "MIT",
+  "type": "commonjs",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .ts ./test",
+    "lint:fix": "eslint --ext .ts ./test --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx ./util/run-k6",
+    "redis-cli": "docker exec -it redis_server redis-cli"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "fast-glob": "^3.3.2",
+    "fast-jwt": "^5.0.0",
+    "ioredis": "^5.4.2",
+    "prompts": "^2.4.2",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/fhir": "^0.0.41",
+    "@types/node": "^22.10.1",
+    "@types/prompts": "^2.4.9",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.4.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.6.0"
+}
